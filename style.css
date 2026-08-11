@@ -1,0 +1,616 @@
+/* =============================
+   BASE
+============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background: #f7f7f5;
+    color: #111;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.container {
+    width: min(1180px, 90%);
+    margin: auto;
+}
+
+.case-container {
+    max-width: 1000px;
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #777;
+    margin-bottom: 18px;
+}
+
+
+/* =============================
+   HOMEPAGE HERO
+============================= */
+
+.hero {
+    padding: 110px 0 80px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 7vw, 85px);
+    line-height: 1;
+    letter-spacing: -3px;
+    font-weight: 600;
+}
+
+.hero-subtitle {
+    max-width: 600px;
+    font-size: 20px;
+    color: #666;
+    margin-top: 25px;
+}
+
+
+/* =============================
+   WORK SECTION
+============================= */
+
+.work-section {
+    padding: 50px 0 120px;
+}
+
+.section-header {
+    margin-bottom: 45px;
+}
+
+.section-header h2 {
+    font-size: 38px;
+    letter-spacing: -1.5px;
+}
+
+
+/* =============================
+   PROJECT CARD
+============================= */
+
+.project-card {
+    display: block;
+    background: #fff;
+
+    border: 1px solid #e4e4e0;
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,0.09);
+}
+
+.project-image {
+    height: 430px;
+    overflow: hidden;
+    background: #ececea;
+}
+
+.project-image img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.015);
+}
+
+.project-content {
+    padding: 42px;
+}
+
+.project-label {
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    color: #777;
+
+    margin-bottom: 16px;
+}
+
+.project-content h3 {
+    font-size: 38px;
+    line-height: 1.15;
+    letter-spacing: -1.4px;
+
+    max-width: 650px;
+}
+
+.project-description {
+    color: #666;
+    font-size: 17px;
+
+    max-width: 620px;
+
+    margin-top: 15px;
+}
+
+
+/* =============================
+   PROJECT METRICS
+============================= */
+
+.project-metrics {
+    display: flex;
+    gap: 60px;
+
+    margin-top: 40px;
+}
+
+.metric strong {
+    display: block;
+
+    font-size: 30px;
+    letter-spacing: -1px;
+}
+
+.metric span {
+    font-size: 12px;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* =============================
+   PROJECT FOOTER
+============================= */
+
+.project-footer {
+    margin-top: 40px;
+    padding-top: 25px;
+
+    border-top: 1px solid #eee;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tags {
+    color: #777;
+    font-size: 14px;
+}
+
+.view-case {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+
+/* =============================
+   CASE NAVIGATION
+============================= */
+
+.case-nav {
+    padding: 24px 0;
+    border-bottom: 1px solid #e2e2df;
+}
+
+.nav-inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.back-link {
+    font-size: 14px;
+}
+
+.nav-name {
+    font-weight: 600;
+}
+
+
+/* =============================
+   CASE HERO
+============================= */
+
+.case-hero {
+    padding: 110px 0 75px;
+}
+
+.case-hero h1 {
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: 1.03;
+    letter-spacing: -3px;
+
+    max-width: 950px;
+}
+
+.case-intro {
+    margin-top: 30px;
+
+    font-size: 20px;
+    line-height: 1.7;
+
+    max-width: 720px;
+
+    color: #666;
+}
+
+
+/* =============================
+   HERO METRICS
+============================= */
+
+.hero-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    margin-top: 70px;
+    padding-top: 30px;
+
+    border-top: 1px solid #ddd;
+}
+
+.hero-metrics strong {
+    display: block;
+    font-size: 30px;
+}
+
+.hero-metrics span {
+    color: #777;
+    font-size: 12px;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* =============================
+   HERO IMAGE
+============================= */
+
+.case-image-section {
+    padding-bottom: 110px;
+}
+
+.case-main-image {
+    border-radius: 18px;
+    border: 1px solid #ddd;
+}
+
+
+/* =============================
+   GENERAL CASE SECTIONS
+============================= */
+
+.case-section {
+    padding: 110px 0;
+}
+
+.alternate {
+    background: #efefec;
+}
+
+.section-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 90px;
+}
+
+.section-grid h2 {
+    font-size: 43px;
+    line-height: 1.15;
+    letter-spacing: -2px;
+}
+
+.case-copy p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 22px;
+}
+
+
+/* =============================
+   OVERVIEW DETAILS
+============================= */
+
+.overview-details {
+    margin-top: 75px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.overview-details div {
+    padding: 25px 15px 25px 0;
+}
+
+.overview-details span {
+    display: block;
+
+    font-size: 10px;
+    color: #888;
+
+    letter-spacing: 1.4px;
+
+    margin-bottom: 5px;
+}
+
+.overview-details strong {
+    font-size: 14px;
+}
+
+
+/* =============================
+   STRATEGY
+============================= */
+
+.strategy-title {
+    font-size: 45px;
+    letter-spacing: -2px;
+
+    margin-bottom: 55px;
+}
+
+.strategy-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.strategy-card {
+    background: #fff;
+
+    border: 1px solid #e1e1dd;
+    border-radius: 16px;
+
+    padding: 35px;
+}
+
+.strategy-card span {
+    color: #aaa;
+    font-size: 12px;
+}
+
+.strategy-card h3 {
+    margin: 35px 0 12px;
+
+    font-size: 23px;
+}
+
+.strategy-card p {
+    color: #666;
+    font-size: 15px;
+}
+
+
+/* =============================
+   CONTENT IMAGES
+============================= */
+
+.content-image {
+    margin-top: 70px;
+}
+
+.content-image img {
+    border-radius: 15px;
+    border: 1px solid #ddd;
+}
+
+.content-image p {
+    color: #888;
+    font-size: 12px;
+
+    margin-top: 12px;
+}
+
+.content-image.large {
+    margin-top: 0;
+}
+
+
+/* =============================
+   RESULTS
+============================= */
+
+.results-section {
+    background: #111;
+    color: #fff;
+
+    padding: 120px 0;
+}
+
+.light-eyebrow {
+    color: #999;
+}
+
+.results-section h2 {
+    font-size: 50px;
+    letter-spacing: -2px;
+
+    margin-bottom: 65px;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.result {
+    border-top: 1px solid #444;
+
+    padding-top: 25px;
+}
+
+.result strong {
+    display: block;
+
+    font-size: 48px;
+    letter-spacing: -2px;
+}
+
+.result span {
+    color: #aaa;
+
+    font-size: 12px;
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* =============================
+   LEARNING SECTION
+============================= */
+
+.learning-section {
+    padding: 130px 0;
+}
+
+.learning-section blockquote {
+    max-width: 850px;
+
+    font-size: clamp(30px, 5vw, 50px);
+
+    line-height: 1.25;
+    letter-spacing: -2px;
+}
+
+.learning-text {
+    max-width: 650px;
+
+    color: #666;
+    font-size: 18px;
+
+    margin-top: 35px;
+}
+
+.return-button {
+    display: inline-block;
+
+    margin-top: 60px;
+
+    border: 1px solid #222;
+    border-radius: 100px;
+
+    padding: 13px 23px;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.return-button:hover {
+    background: #111;
+    color: #fff;
+}
+
+
+/* =============================
+   MOBILE
+============================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding-top: 70px;
+    }
+
+    .project-image {
+        height: 250px;
+    }
+
+    .project-content {
+        padding: 26px;
+    }
+
+    .project-content h3 {
+        font-size: 29px;
+    }
+
+    .project-metrics {
+        gap: 25px;
+        justify-content: space-between;
+    }
+
+    .metric strong {
+        font-size: 23px;
+    }
+
+    .project-footer {
+        display: block;
+    }
+
+    .view-case {
+        margin-top: 15px;
+    }
+
+    .case-hero {
+        padding-top: 70px;
+    }
+
+    .section-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .strategy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-metrics,
+    .results-grid,
+    .overview-details {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .case-section {
+        padding: 75px 0;
+    }
+
+    .results-section {
+        padding: 80px 0;
+    }
+
+}
