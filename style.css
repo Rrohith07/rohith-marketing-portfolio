@@ -614,3 +614,430 @@ img {
     }
 
 }
+/* =========================================
+   MULTIPLE PROJECTS
+========================================= */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+
+/* First project larger */
+
+.project-featured {
+    grid-column: 1 / -1;
+}
+
+
+/* Smaller project image */
+
+.compact-image {
+    height: 300px;
+}
+
+
+/* Project numbers */
+
+.project-number {
+    font-size: 12px;
+    color: #aaa;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+
+/* Cards inside grid */
+
+.projects-grid .project-card:not(.project-featured)
+.project-content {
+    padding: 32px;
+}
+
+
+.projects-grid .project-card:not(.project-featured)
+.project-content h3 {
+    font-size: 30px;
+}
+
+
+.projects-grid .project-card:not(.project-featured)
+.project-metrics {
+    gap: 30px;
+}
+
+
+.projects-grid .project-card:not(.project-featured)
+.metric strong {
+    font-size: 25px;
+}
+
+
+
+/* =========================================
+   HERO BUTTONS
+========================================= */
+
+.hero-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 35px;
+}
+
+
+.primary-button {
+    display: inline-block;
+
+    background: #111;
+    color: #fff;
+
+    padding: 13px 23px;
+
+    border-radius: 100px;
+
+    font-size: 14px;
+
+    transition: 0.2s ease;
+}
+
+
+.primary-button:hover {
+    transform: translateY(-2px);
+}
+
+
+.text-link {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+
+/* =========================================
+   3 COLUMN METRICS
+========================================= */
+
+.hero-metrics.three-metrics {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.overview-details.three-columns {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.results-grid.three-results {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+
+/* =========================================
+   CHANNEL SECTIONS
+========================================= */
+
+.channel-section {
+    padding: 110px 0;
+}
+
+
+.channel-header {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        auto;
+
+    gap: 70px;
+
+    align-items: end;
+}
+
+
+.channel-header h2 {
+    font-size: 45px;
+
+    line-height: 1.12;
+
+    letter-spacing: -2px;
+
+    max-width: 600px;
+}
+
+
+.channel-number {
+    min-width: 180px;
+}
+
+
+.channel-number strong {
+    display: block;
+
+    font-size: 60px;
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+}
+
+
+.channel-number span {
+    display: block;
+
+    color: #777;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.2px;
+
+    margin-top: 10px;
+}
+
+
+
+/* =========================================
+   ECOMMERCE
+========================================= */
+
+.business-perspective {
+    background: #111;
+    color: #fff;
+
+    padding: 130px 0;
+}
+
+
+.business-perspective h2 {
+    max-width: 850px;
+
+    font-size: clamp(45px, 6vw, 70px);
+
+    line-height: 1.05;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 45px;
+}
+
+
+.business-perspective p {
+    max-width: 680px;
+
+    font-size: 18px;
+
+    color: #aaa;
+
+    margin-bottom: 20px;
+}
+
+
+
+/* Responsibility list */
+
+.responsibility-list {
+    margin-top: 50px;
+
+    border-top: 1px solid #444;
+}
+
+
+.responsibility-list div {
+    padding: 24px 0;
+
+    border-bottom: 1px solid #333;
+
+    font-size: 22px;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+
+.responsibility-list div::after {
+    content: "↗";
+
+    color: #666;
+}
+
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    background: #111;
+    color: #fff;
+
+    padding: 100px 0;
+}
+
+
+.footer-inner {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    gap: 80px;
+}
+
+
+.site-footer h2 {
+    max-width: 600px;
+
+    font-size: 48px;
+
+    line-height: 1.08;
+
+    letter-spacing: -2px;
+}
+
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.footer-links a {
+    color: #aaa;
+
+    font-size: 16px;
+
+    transition: 0.2s;
+}
+
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .project-featured {
+        grid-column: auto;
+    }
+
+
+    .compact-image {
+        height: 250px;
+    }
+
+
+    .hero-metrics.three-metrics,
+    .results-grid.three-results,
+    .overview-details.three-columns {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+
+    .channel-header {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    .site-footer h2 {
+        font-size: 38px;
+    }
+
+}
+/* =========================================
+   CONTACT DETAILS
+========================================= */
+
+.hero-contact {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 22px;
+
+    font-size: 14px;
+    color: #777;
+}
+
+.hero-contact a {
+    transition: color 0.2s ease;
+}
+
+.hero-contact a:hover {
+    color: #111;
+}
+
+.hero-contact span {
+    color: #bbb;
+}
+
+
+/* FOOTER CONTACT */
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin-top: 28px;
+}
+
+.contact-details a {
+    color: #999;
+
+    font-size: 15px;
+
+    transition: color 0.2s ease;
+}
+
+.contact-details a:hover {
+    color: #fff;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .hero-contact {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .hero-contact span {
+        display: none;
+    }
+
+}
